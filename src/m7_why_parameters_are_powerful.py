@@ -10,7 +10,7 @@ import rosegraphics as rg
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    #run_test_draw_circles()
+    # run_test_draw_circles()
     # Un-comment the next lines when you are ready to use them.
     run_test_better_draw_circles()
     run_test_even_better_draw_circles()
@@ -105,12 +105,12 @@ def better_draw_circles(rad):
 
     window = rg.RoseWindow()
 
-    centerPoint = rg.Point(200,150)
+    centerpoint = rg.Point(200, 150)
 
-    centerPoint.attach_to(window)
+    centerpoint.attach_to(window)
 
     for k in range(20):
-        multi = rg.Circle(centerPoint,(k + 1) * rad)
+        multi = rg.Circle(centerpoint, (k + 1) * rad)
         multi.attach_to(window)
 
     window.render()
@@ -119,7 +119,7 @@ def better_draw_circles(rad):
 
 
 # ----------------------------------------------------------------------
-# TODO: 3.
+# Done: 3.
 #   In the previous exercise, you made a MORE POWERFUL version
 #   of draw_circles by introducing a PARAMETER for the amount by
 #   which the radii of the concentric circles increase.
@@ -150,20 +150,20 @@ def better_draw_circles(rad):
 
 def run_test_even_better_draw_circles():
 
-    even_better_draw_circles(50,50,2,10)
-    even_better_draw_circles(100,100,5,6)
+    even_better_draw_circles(50, 50, 2, 10)
+    even_better_draw_circles(100, 100, 5, 6)
 
 
 def even_better_draw_circles(pointx, pointy, radius, circlecount):
 
     window = rg.RoseWindow()
 
-    centerPoint = rg.Point(pointx, pointy)
+    centerpoint = rg.Point(pointx, pointy)
 
-    centerPoint.attach_to(window)
+    centerpoint.attach_to(window)
 
     for k in range(circlecount + 1):
-        multi = rg.Circle(centerPoint, (k + 1) * radius)
+        multi = rg.Circle(centerpoint, (k + 1) * radius)
         multi.attach_to(window)
 
     window.render()
